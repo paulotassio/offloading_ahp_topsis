@@ -1,0 +1,275 @@
+{
+  "parametros": {
+    "v_caminhada_ms": 1.2,
+    "d_margem_m": 0.5,
+    "th_mediana_s": 0.8,
+    "th_sigma_log": 0.3,
+    "t_alerta_s": 0.15,
+    "fov_vertical_graus": 42.6,
+    "proximidade_truncada": 0.98,
+    "d_referencia_m": 3.0,
+    "p_det_referencia": 1.0,
+    "janela": 120,
+    "min_historico": 5,
+    "n_quadratura": 16
+  },
+  "n_quadros": 1394,
+  "n_detectados": 264,
+  "n_detectados_por_sessao": {
+    "A": 227,
+    "B": 37
+  },
+  "n_dist_truncada": 6,
+  "n_prior_padrao": 0,
+  "dist_m_quartis": [
+    3.5103230443200104,
+    6.459665964958121,
+    8.338773890974021
+  ],
+  "latencia_ms_percentis": {
+    "p50": 180.5,
+    "p95": 331.0,
+    "p99": 413.2099999999998,
+    "max": 579.0
+  },
+  "desfecho": {
+    "total": {
+      "n": 264,
+      "taxa_atraso": 0.09137754054093997,
+      "taxa_atraso_ic95": [
+        0.030282518305878147,
+        0.158796634218763
+      ],
+      "taxa_atraso_lat_zero": 0.048464216023533936,
+      "taxa_atraso_lat_zero_ic95": [
+        0.01056075030750085,
+        0.09857297057553693
+      ],
+      "parcela_sistema": 0.04291332451740603,
+      "parcela_sistema_ic95": [
+        0.012360994910965005,
+        0.0789532869804435
+      ],
+      "frac_quadros_p_menor_095": 0.1856060606060606
+    },
+    "sessao_A": {
+      "n": 227,
+      "taxa_atraso": 0.06581179784958664,
+      "taxa_atraso_ic95": [
+        0.010304829664738347,
+        0.12796898159472633
+      ],
+      "taxa_atraso_lat_zero": 0.022331417635738093,
+      "taxa_atraso_lat_zero_ic95": [
+        0.0020671406502189974,
+        0.047260473946146964
+      ],
+      "parcela_sistema": 0.04348038021384855,
+      "parcela_sistema_ic95": [
+        0.007637638983454188,
+        0.08210952859454297
+      ],
+      "frac_quadros_p_menor_095": 0.13656387665198239
+    },
+    "sessao_B": {
+      "n": 37,
+      "taxa_atraso": 0.24822682678248614,
+      "taxa_atraso_ic95": [
+        0.0502285734285128,
+        0.535061790001652
+      ],
+      "taxa_atraso_lat_zero": 0.20879246559190304,
+      "taxa_atraso_lat_zero_ic95": [
+        0.028598307841504675,
+        0.49605092708747545
+      ],
+      "parcela_sistema": 0.039434361190583106,
+      "parcela_sistema_ic95": [
+        0.014346776218448586,
+        0.053355356377621926
+      ],
+      "frac_quadros_p_menor_095": 0.4864864864864865
+    }
+  },
+  "atraso_por_classe": {
+    "bench": {
+      "n": 24,
+      "fracao_do_atraso": 0.5792157301860236,
+      "dist_mediana_m": 1.8686891895022673
+    },
+    "dog": {
+      "n": 6,
+      "fracao_do_atraso": 0.24871836769441397,
+      "dist_mediana_m": 0.8262701153878405
+    },
+    "person": {
+      "n": 199,
+      "fracao_do_atraso": 0.07140727893958178,
+      "dist_mediana_m": 6.708114655918049
+    },
+    "cat": {
+      "n": 1,
+      "fracao_do_atraso": 0.04145306128240233,
+      "dist_mediana_m": 0.3896001065983677
+    },
+    "oven": {
+      "n": 1,
+      "fracao_do_atraso": 0.039129315301215446,
+      "dist_mediana_m": 1.4656384962510025
+    },
+    "chair": {
+      "n": 5,
+      "fracao_do_atraso": 0.008442815478807823,
+      "dist_mediana_m": 3.0778408421271055
+    }
+  },
+  "fracao_atraso_d_menor_2m": 0.8437306818370499,
+  "n_d_menor_2m": 24,
+  "calibracao": {
+    "tau_s": 0.3,
+    "por_janela": {
+      "5": {
+        "n_predicoes": 1384,
+        "freq_evento": 0.06864161849710983,
+        "brier_janela": 0.07427745664739885,
+        "brier_climatologia": 0.06435859297492966,
+        "bss": -0.15411871537236688,
+        "bss_ic95": [
+          -0.20664495691987184,
+          -0.10795457294131684
+        ],
+        "cobertura_q90": 0.7861271676300579
+      },
+      "10": {
+        "n_predicoes": 1384,
+        "freq_evento": 0.06864161849710983,
+        "brier_janela": 0.0692313270376123,
+        "brier_climatologia": 0.06435859297492966,
+        "bss": -0.07571225282350058,
+        "bss_ic95": [
+          -0.11177153923886811,
+          -0.039202476963473724
+        ],
+        "cobertura_q90": 0.819364161849711
+      },
+      "30": {
+        "n_predicoes": 1384,
+        "freq_evento": 0.06864161849710983,
+        "brier_janela": 0.06595757487188449,
+        "brier_climatologia": 0.06435859297492966,
+        "bss": -0.024844885865943356,
+        "bss_ic95": [
+          -0.04217550438292202,
+          -0.009168991521802635
+        ],
+        "cobertura_q90": 0.8648843930635838
+      },
+      "60": {
+        "n_predicoes": 1384,
+        "freq_evento": 0.06864161849710983,
+        "brier_janela": 0.0648262810150866,
+        "brier_climatologia": 0.06435859297492966,
+        "bss": -0.007266909025483548,
+        "bss_ic95": [
+          -0.020225665271481074,
+          0.005671730157007915
+        ],
+        "cobertura_q90": 0.8764450867052023
+      },
+      "120": {
+        "n_predicoes": 1384,
+        "freq_evento": 0.06864161849710983,
+        "brier_janela": 0.0643653303841848,
+        "brier_climatologia": 0.06435859297492966,
+        "bss": -0.00010468546535435941,
+        "bss_ic95": [
+          -0.01052769190281323,
+          0.009761055253873023
+        ],
+        "cobertura_q90": 0.880057803468208
+      }
+    },
+    "janela_usada": 120,
+    "freq_evento": 0.06864161849710983
+  },
+  "comparacao_fuzzy": {
+    "spearman_todos": 0.11412471635734715,
+    "spearman_detectados": 0.41681222718295075,
+    "decisoes_fuzzy_pct": {
+      "HIBRIDO": 54.3,
+      "LOCAL": 42.0,
+      "EDGE": 3.7
+    },
+    "decisoes_v2_pct": {
+      "EDGE": 98.3,
+      "LOCAL": 1.3,
+      "HIBRIDO": 0.4
+    },
+    "n_sem_historico": 10,
+    "tabela_cruzada": {
+      "EDGE": {
+        "EDGE": 49,
+        "HIBRIDO": 747,
+        "LOCAL": 564
+      },
+      "HIBRIDO": {
+        "EDGE": 0,
+        "HIBRIDO": 2,
+        "LOCAL": 4
+      },
+      "LOCAL": {
+        "EDGE": 0,
+        "HIBRIDO": 0,
+        "LOCAL": 18
+      }
+    },
+    "qoe_prospectiva_mediana": 0.9929832958364013,
+    "qoe_prospectiva_min": 0.990458756766356
+  },
+  "sensibilidade": {
+    "base": 0.09137754054093997,
+    "fatores": [
+      {
+        "fator": "Reação T_h (mediana 0,5–1,2 s)",
+        "baixo": 0.04967092972119368,
+        "alto": 0.15364464944706915
+      },
+      {
+        "fator": "Dispersão de T_h (σ 0,2–0,5)",
+        "baixo": 0.08600438373781712,
+        "alto": 0.1020109239786082
+      },
+      {
+        "fator": "Margem d_m (0,3–1,0 m)",
+        "baixo": 0.06941051068575642,
+        "alto": 0.15737775811929863
+      },
+      {
+        "fator": "Velocidade (0,9–1,5 m/s)",
+        "baixo": 0.05188109103542151,
+        "alto": 0.13568222207575653
+      },
+      {
+        "fator": "FOV vertical (38–48°)",
+        "baixo": 0.06603483797225432,
+        "alto": 0.12494229370371193
+      },
+      {
+        "fator": "Alerta/TTS (0,05–0,30 s)",
+        "baixo": 0.07799772030743929,
+        "alto": 0.11247058245023292
+      },
+      {
+        "fator": "Latência do sistema (×0 a ×2)",
+        "baixo": 0.048464216023533936,
+        "alto": 0.11984613367213519
+      }
+    ]
+  },
+  "d_minima_m": {
+    "latencia_zero": 2.0724487121335224,
+    "piloto_empirica": 2.497983403388094,
+    "piloto_p99_constante": 2.748300712133522,
+    "piloto_x2": 2.775927775826385
+  }
+}
