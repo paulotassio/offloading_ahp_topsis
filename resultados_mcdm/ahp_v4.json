@@ -1,0 +1,58 @@
+{
+  "criterios": [
+    "criticidade",
+    "jitter",
+    "latencia",
+    "energia"
+  ],
+  "matriz": [
+    [
+      1.0,
+      3.0,
+      5.0,
+      7.0
+    ],
+    [
+      0.3333,
+      1.0,
+      3.0,
+      3.0
+    ],
+    [
+      0.2,
+      0.3333,
+      1.0,
+      2.0
+    ],
+    [
+      0.1429,
+      0.3333,
+      0.5,
+      1.0
+    ]
+  ],
+  "julgamentos": {
+    "criticidade/jitter": 3,
+    "criticidade/latencia": 5,
+    "jitter/latencia": 3,
+    "criticidade/energia": 7,
+    "jitter/energia": 3,
+    "latencia/energia": 2
+  },
+  "pesos_autovetor": [
+    0.578,
+    0.2405,
+    0.1103,
+    0.0711
+  ],
+  "pesos_media_linhas": [
+    0.5761,
+    0.2399,
+    0.1125,
+    0.0716
+  ],
+  "lambda_max": 4.064,
+  "CI": 0.0213,
+  "CR": 0.0237,
+  "RI": 0.9
+}

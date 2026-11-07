@@ -1,0 +1,158 @@
+{
+  "semente": 42,
+  "reproducao_confere": true,
+  "ahp_v4": {
+    "criterios": [
+      "criticidade",
+      "jitter",
+      "latencia",
+      "energia"
+    ],
+    "matriz": [
+      [
+        1.0,
+        3.0,
+        5.0,
+        7.0
+      ],
+      [
+        0.3333,
+        1.0,
+        3.0,
+        3.0
+      ],
+      [
+        0.2,
+        0.3333,
+        1.0,
+        2.0
+      ],
+      [
+        0.1429,
+        0.3333,
+        0.5,
+        1.0
+      ]
+    ],
+    "julgamentos": {
+      "criticidade/jitter": 3,
+      "criticidade/latencia": 5,
+      "jitter/latencia": 3,
+      "criticidade/energia": 7,
+      "jitter/energia": 3,
+      "latencia/energia": 2
+    },
+    "pesos_autovetor": [
+      0.578,
+      0.2405,
+      0.1103,
+      0.0711
+    ],
+    "pesos_media_linhas": [
+      0.5761,
+      0.2399,
+      0.1125,
+      0.0716
+    ],
+    "lambda_max": 4.064,
+    "CI": 0.0213,
+    "CR": 0.0237,
+    "RI": 0.9
+  },
+  "v4_nova_concord_sessoes_media_dp": [
+    27.7,
+    7.9
+  ],
+  "v4_nova_kappa_sessoes_media_dp": [
+    0.16,
+    0.05
+  ],
+  "v4_ic95_bootstrap_blocos": {
+    "piloto": {
+      "concord_%": [
+        35.9,
+        48.1
+      ],
+      "EDGE_%": [
+        33.1,
+        49.1
+      ],
+      "HIBRIDO_%": [
+        0.0,
+        0.0
+      ]
+    },
+    "nova": {
+      "concord_%": [
+        22.8,
+        27.7
+      ],
+      "EDGE_%": [
+        54.3,
+        61.1
+      ],
+      "HIBRIDO_%": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "mapa_pesos": {
+    "amostras": 4000,
+    "P1_vale_no_AHP": true,
+    "C_estrela_AHP": 0.1,
+    "fracao_simplex_P1_%": 60.2,
+    "w_C_acima_do_qual_P1_sempre_vale": 0.335,
+    "HIBRIDO_acima_de_20%_so_com_w_E_ate": 0.081,
+    "concord_nova_maxima_%": 72.2,
+    "pesos_da_concord_maxima": [
+      0.761,
+      0.222,
+      0.016,
+      0.0
+    ],
+    "distancia_AHP_ate_falha_mais_proxima": 0.369,
+    "concord_nova_simplex_p5_p50_p95": [
+      5.5,
+      21.6,
+      37.8
+    ]
+  },
+  "chegada_obstaculos": {
+    "eventos_primeiro_critico": 177,
+    "configuracoes_V4": 4029,
+    "correlacao_x_y_V4": 0.987,
+    "media_abs_y_menos_x_pp": 7.3,
+    "ic95_y_primeiros_EDGE_%": {
+      "V4 base": [
+        53.5,
+        71.2
+      ],
+      "Fuzzy especialista": [
+        2.0,
+        10.4
+      ]
+    },
+    "especialista": {
+      "x_EDGE_sem_obstaculo_anterior_%": 6.1,
+      "y_EDGE_primeiros_criticos_%": 5.6,
+      "EDGE_alta_%": 2.4
+    },
+    "V3": {
+      "x_EDGE_sem_obstaculo_anterior_%": 59.8,
+      "y_EDGE_primeiros_criticos_%": 46.3,
+      "EDGE_alta_%": 19.8
+    },
+    "regra": {
+      "x_EDGE_sem_obstaculo_anterior_%": 76.2,
+      "y_EDGE_primeiros_criticos_%": 62.1,
+      "EDGE_alta_%": 26.5
+    },
+    "V4_base": {
+      "x_EDGE_sem_obstaculo_anterior_%": 76.4,
+      "y_EDGE_primeiros_criticos_%": 61.0,
+      "EDGE_alta_%": 26.0
+    }
+  },
+  "tempo_s": 97.7
+}

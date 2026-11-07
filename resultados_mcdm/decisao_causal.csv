@@ -1,0 +1,13 @@
+conjunto,politica,quadros_alta,alta_EDGE_%,primeiros_alta,primeiros_alta_EDGE_%,primeiros_alta_LOCAL_%
+piloto,Fuzzy (atual),48,0.0,23,0.0,100.0
+piloto,Fuzzy (causal),48,6.25,23,13.04,43.48
+piloto,V3 (atual),48,0.0,23,0.0,100.0
+piloto,V3 (causal),48,14.58,23,30.43,39.13
+piloto,V4 (atual),48,0.0,23,0.0,100.0
+piloto,V4 (causal),48,25.0,23,52.17,47.83
+nova,Fuzzy (atual),415,0.0,177,0.0,81.36
+nova,Fuzzy (causal),415,2.41,177,5.65,22.03
+nova,V3 (atual),415,0.0,177,0.0,100.0
+nova,V3 (causal),415,19.76,177,46.33,32.2
+nova,V4 (atual),415,0.0,177,0.0,100.0
+nova,V4 (causal),415,26.02,177,61.02,38.42

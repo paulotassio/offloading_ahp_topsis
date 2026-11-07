@@ -1,0 +1,102 @@
+[1/11] Carregando dados e calculando o especialista...
+    fuzzy de 'piloto' lido do cache.
+    fuzzy de 'nova' lido do cache.
+    piloto: 1394 quadros; nova coleta: 22473 quadros, 6 sessões.
+[2/11] Conferindo a reprodução da Tabela 16 do artigo...
+conjunto metodo   L_%  H_%   B_%  concord_%                   artigo  confere
+  piloto  Fuzzy  42.0 54.3   3.7        NaN  (42.0, 54.3, 3.7, None)     True
+  piloto     V1   0.0  0.0 100.0        3.7   (0.0, 0.0, 100.0, 3.7)     True
+  piloto     V2  99.9  0.0   0.1       42.0   (99.9, 0.0, 0.1, 42.0)     True
+  piloto     V3  47.1 25.7  27.3       56.0 (47.1, 25.7, 27.3, 56.0)     True
+    nova  Fuzzy  22.5 72.2   5.3        NaN  (22.5, 72.2, 5.3, None)     True
+    nova     V1   0.0  0.0 100.0        5.3   (0.0, 0.0, 100.0, 5.3)     True
+    nova     V2 100.0  0.0   0.0       22.5  (100.0, 0.0, 0.0, 22.5)     True
+    nova     V3  38.4 16.4  45.2       32.8 (38.4, 16.4, 45.2, 32.8)     True
+[3/11] AHP 4x4 da V4...
+    pesos (C, J, L, E) = [0.578  0.2405 0.1103 0.0711]; lambda_max = 4.0640; CR = 0.0237
+[4/11] Comparando métodos...
+conjunto                metodo  LOCAL_%  HIBRIDO_%  EDGE_%  concord_%  kappa  alta_EDGE_%  obst_EDGE_%  igual_a_V4_%
+  piloto                 Fuzzy     42.0       54.3     3.7      100.0    1.0          0.0          0.0          43.4
+  piloto                    V1      0.0        0.0   100.0        3.7    0.0        100.0        100.0          41.8
+  piloto                    V2     99.9        0.0     0.1       42.1    0.0          0.0          0.0          58.3
+  piloto                    V3     47.1       25.7    27.2       56.2    0.3          0.0          0.0          74.3
+  piloto                    V4     58.2        0.0    41.8       43.4    0.2          0.0          0.0         100.0
+  piloto SAW (normalização V4)     69.4        0.2    30.3       43.0    0.2          0.0          0.0          88.5
+  piloto  Regra de duas linhas     58.2        0.0    41.8       45.1    0.3          0.0          0.0          95.3
+  piloto          Sempre local    100.0        0.0     0.0       42.0    0.0          0.0          0.0          58.2
+  piloto        Sempre híbrido      0.0      100.0     0.0       54.3    0.0          0.0          0.0           0.0
+  piloto          Sempre borda      0.0        0.0   100.0        3.7    0.0        100.0        100.0          41.8
+    nova                 Fuzzy     22.5       72.2     5.3      100.0    1.0          0.0          3.2          25.5
+    nova                    V1      0.0        0.0   100.0        5.3    0.0        100.0        100.0          57.4
+    nova                    V2    100.0        0.0     0.0       22.5    0.0          0.0          0.0          42.6
+    nova                    V3     38.4       16.4    45.2       32.8    0.1          0.0          0.0          83.6
+    nova                    V4     42.6        0.0    57.4       25.5    0.1          0.0          0.0         100.0
+    nova SAW (normalização V4)     53.1        0.0    46.9       24.6    0.1          0.0          0.0          89.5
+    nova  Regra de duas linhas     43.2        0.0    56.8       26.4    0.2          0.0          0.0          97.7
+    nova          Sempre local    100.0        0.0     0.0       22.5    0.0          0.0          0.0          42.6
+    nova        Sempre híbrido      0.0      100.0     0.0       72.2    0.0          0.0          0.0           0.0
+    nova          Sempre borda      0.0        0.0   100.0        5.3    0.0        100.0        100.0          57.4
+[5/11] V4 por sessão e bootstrap por blocos...
+    IC 95%: {'piloto': {'concord_%': [np.float64(35.9), np.float64(48.1)], 'EDGE_%': [np.float64(33.1), np.float64(49.1)], 'HIBRIDO_%': [np.float64(0.0), np.float64(0.0)]}, 'nova': {'concord_%': [np.float64(22.8), np.float64(27.7)], 'EDGE_%': [np.float64(54.3), np.float64(61.1)], 'HIBRIDO_%': [np.float64(0.0), np.float64(0.0)]}}
+[6/10] Mapa do espaço de pesos (4000 amostras)...
+    {'amostras': 4000, 'P1_vale_no_AHP': True, 'C_estrela_AHP': np.float64(0.1), 'fracao_simplex_P1_%': np.float64(60.2), 'w_C_acima_do_qual_P1_sempre_vale': np.float64(0.335), 'HIBRIDO_acima_de_20%_so_com_w_E_ate': np.float64(0.081), 'concord_nova_maxima_%': np.float64(72.2), 'pesos_da_concord_maxima': [0.761, 0.222, 0.016, 0.0], 'distancia_AHP_ate_falha_mais_proxima': 0.369, 'concord_nova_simplex_p5_p50_p95': [5.5, 21.6, 37.8]}
+[7/11] Sensibilidade da V4...
+                           configuracao  CR  C_estrela_grade  nova_concord_%  nova_LOCAL_%  nova_HIBRIDO_%  nova_EDGE_%  nova_alta_EDGE_%  piloto_concord_%
+                                   base NaN              0.1            25.5          42.6             0.0         57.4               0.0              43.4
+                             rho = 0.25 NaN              0.1            16.4          28.7             1.1         70.2               0.0              16.4
+                              rho = 0.5 NaN              0.1            20.2          33.6             0.1         66.2               0.0              25.5
+                              rho = 2.0 NaN              0.1            22.5          99.9             0.0          0.1               0.0              41.8
+                              rho = 4.0 NaN              0.1            22.5         100.0             0.0          0.0               0.0              42.0
+                 inferência remota 0 ms NaN              0.1            25.3          41.8             0.0         58.2               0.0              43.2
+                inferência remota 50 ms NaN              0.1            25.4          44.1             0.0         55.9               0.0              43.0
+               inferência remota 100 ms NaN              0.1            22.3          63.3             0.0         36.7               0.0              41.8
+              enlace até a borda +50 ms NaN              0.1            24.0          49.6             0.0         50.4               0.0              42.5
+             enlace até a borda +100 ms NaN              0.1            21.9          79.7             0.0         20.3               0.0              41.4
+             enlace até a borda +200 ms NaN              0.1            22.4          99.8             0.0          0.2               0.0              41.6
+                escala do jitter 200 ms NaN              0.1            23.4          71.8             0.0         28.2               0.0              42.3
+                escala do jitter 800 ms NaN              0.1            19.3          33.5             0.0         66.5               0.0              26.8
+              escala da latência 400 ms NaN              0.1            18.2          28.5             5.4         66.1               0.0              25.2
+             escala da latência 1600 ms NaN              0.1            23.3          72.9             0.0         27.1               0.0              42.3
+             Híbrido: só o local alerta NaN              0.2            25.5          42.6             0.0         57.4               0.0              43.4
+                     pesos iguais (1/4) NaN              0.7            19.9          28.0             0.0         72.0               0.0              27.5
+  julgamento criticidade/jitter: 3 -> 2 0.0              0.1            25.5          44.2             0.0         55.8               0.0              43.0
+  julgamento criticidade/jitter: 3 -> 4 0.0              0.1            25.4          41.7             0.0         58.3               0.0              43.0
+julgamento criticidade/latencia: 5 -> 4 0.0              0.1            25.4          42.0             0.0         58.0               0.0              43.3
+julgamento criticidade/latencia: 5 -> 6 0.0              0.1            25.6          43.1             0.0         56.9               0.0              43.4
+     julgamento jitter/latencia: 3 -> 2 0.0              0.1            24.5          39.7             0.0         60.2               0.0              41.7
+     julgamento jitter/latencia: 3 -> 4 0.0              0.1            25.4          45.2             0.0         54.8               0.0              43.2
+ julgamento criticidade/energia: 7 -> 6 0.0              0.1            25.6          42.6             0.0         57.4               0.0              43.4
+ julgamento criticidade/energia: 7 -> 8 0.0              0.1            25.5          42.5             0.0         57.5               0.0              43.3
+      julgamento jitter/energia: 3 -> 2 0.0              0.1            25.3          41.4             0.0         58.6               0.0              42.7
+      julgamento jitter/energia: 3 -> 4 0.0              0.1            25.6          43.7             0.0         56.3               0.0              43.1
+    julgamento latencia/energia: 2 -> 1 0.0              0.1            25.3          45.9             0.0         54.1               0.0              43.2
+    julgamento latencia/energia: 2 -> 3 0.1              0.1            24.9          40.7             0.3         59.0               0.0              42.7
+[8/11] Teste de inversão de ordem (retirando o Híbrido)...
+conjunto formulacao  inversoes_%  quadros
+  piloto         V1          0.0     1394
+  piloto         V2          0.0     1394
+  piloto         V3          0.0     1394
+  piloto         V4          0.0     1394
+    nova         V1          0.0    22473
+    nova         V2          0.0    22473
+    nova         V3          0.0    22473
+    nova         V4          0.0    22473
+[9/11] Decisão causal (quadro anterior)...
+conjunto       politica  quadros_alta  alta_EDGE_%  primeiros_alta  primeiros_alta_EDGE_%  primeiros_alta_LOCAL_%
+  piloto  Fuzzy (atual)            48          0.0              23                    0.0                   100.0
+  piloto Fuzzy (causal)            48          6.2              23                   13.0                    43.5
+  piloto     V3 (atual)            48          0.0              23                    0.0                   100.0
+  piloto    V3 (causal)            48         14.6              23                   30.4                    39.1
+  piloto     V4 (atual)            48          0.0              23                    0.0                   100.0
+  piloto    V4 (causal)            48         25.0              23                   52.2                    47.8
+    nova  Fuzzy (atual)           415          0.0             177                    0.0                    81.4
+    nova Fuzzy (causal)           415          2.4             177                    5.6                    22.0
+    nova     V3 (atual)           415          0.0             177                    0.0                   100.0
+    nova    V3 (causal)           415         19.8             177                   46.3                    32.2
+    nova     V4 (atual)           415          0.0             177                    0.0                   100.0
+    nova    V4 (causal)           415         26.0             177                   61.0                    38.4
+[10/11] Figura do plano criticidade x jitter...
+[11/11] Chegada de obstáculos em todas as configurações (causal)...
+    {'eventos_primeiro_critico': 177, 'configuracoes_V4': 4029, 'correlacao_x_y_V4': 0.987, 'media_abs_y_menos_x_pp': 7.3, 'ic95_y_primeiros_EDGE_%': {'V4 base': [53.5, 71.2], 'Fuzzy especialista': [2.0, 10.4]}, 'especialista': {'x_EDGE_sem_obstaculo_anterior_%': 6.1, 'y_EDGE_primeiros_criticos_%': 5.6, 'EDGE_alta_%': 2.4}, 'V3': {'x_EDGE_sem_obstaculo_anterior_%': 59.8, 'y_EDGE_primeiros_criticos_%': 46.3, 'EDGE_alta_%': 19.8}, 'regra': {'x_EDGE_sem_obstaculo_anterior_%': 76.2, 'y_EDGE_primeiros_criticos_%': 62.1, 'EDGE_alta_%': 26.5}, 'V4_base': {'x_EDGE_sem_obstaculo_anterior_%': 76.4, 'y_EDGE_primeiros_criticos_%': 61.0, 'EDGE_alta_%': 26.0}}
+
+Pronto em 97.1 s. Saídas em 'resultados_mcdm'.
